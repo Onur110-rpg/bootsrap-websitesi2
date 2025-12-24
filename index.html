@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financea  - Finansal Çözümler</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0d2137;
+            --accent-color: #ff9f1c;
+            --light-bg: #f8f9fa;
+        }
+
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+
+        
+        .top-bar { background: var(--primary-color); color: white; font-size: 0.85rem; padding: 8px 0; }
+        .top-bar i { color: var(--accent-color); margin-right: 5px; }
+
+        
+        .navbar { transition: 0.4s; }
+        .nav-link { font-weight: 600; color: var(--primary-color) !important; }
+        .nav-link:hover { color: var(--accent-color) !important; }
+
+        
+        .hero {
+            background: linear-gradient(rgba(13, 33, 55, 0.8), rgba(13, 33, 55, 0.8)), 
+                        url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        
+        .stats-section { background: var(--accent-color); color: var(--primary-color); padding: 50px 0; }
+        .stat-item h2 { font-size: 3rem; margin-bottom: 0; }
+
+        /* Cards Styling */
+        .service-card {
+            border: none;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--accent-color);
+            box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+        }
+
+        
+        .testimonial-item { background: white; padding: 40px; border-radius: 10px; margin: 20px 0; }
+
+        
+        footer { background: #081421; color: #a5a5a5; padding: 80px 0 20px; }
+        footer h5 { color: white; margin-bottom: 25px; }
+        footer a { color: #a5a5a5; text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: var(--accent-color); }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <span><i class="fas fa-phone"></i> +90 (212) 123 45 67</span>
+                <span class="ms-3"><i class="fas fa-envelope"></i> info@financea.com</span>
+            </div>
+            <div>
+                <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand text-primary" href="#">FINANCEA<span class="text-warning">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Hizmetler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Yorumlar</a></li>
+                    <li class="nav-item"><a class="btn btn-warning fw-bold px-4 ms-lg-3" href="#contact">Hemen Başlayın</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-2 mb-4">Finansal Başarınızı <span class="text-warning">Güvenceye</span> Alın</h1>
+                    <p class="lead mb-5 opacity-75">Şirketiniz için stratejik analizler, vergi planlaması ve profesyonel yatırım danışmanlığı sunuyoruz.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#contact" class="btn btn-warning btn-lg px-5 py-3 fw-bold">Ücretsiz Randevu</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg px-5 py-3">Hizmetleri Keşfet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 stat-item">
+                    <h2>850+</h2>
+                    <p class="fw-bold">Mutlu Müşteri</p>
+                </div>
+                <div class="col-md-3 stat-item">
+                    <h2>15+</h2>
+                    <p class="fw-bold">Yıllık Deneyim</p>
+                </div>
+                <div class="col-md-3 stat-item">
+                    <h2>24</h2>
+                    <p class="fw-bold">Uzman Danışman</p>
+                </div>
+                <div class="col-md-3 stat-item">
+                    <h2>12</h2>
+                    <p class="fw-bold">Global Ödül</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5">Profesyonel Hizmetlerimiz</h2>
+                <div class="mx-auto bg-warning" style="height: 3px; width: 60px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 service-card">
+                        <div class="icon-box mb-4 text-warning"><i class="fas fa-coins fa-3x"></i></div>
+                        <h4>Varlık Yönetimi</h4>
+                        <p class="text-muted">Birikimlerinizi en yüksek verimle değerlendirmek için uzman stratejiler sunuyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 service-card">
+                        <div class="icon-box mb-4 text-warning"><i class="fas fa-briefcase fa-3x"></i></div>
+                        <h4>Kurumsal Finans</h4>
+                        <p class="text-muted">Şirketinizin nakit akışını ve finansal yapısını optimize ediyoruz.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 service-card">
+                        <div class="icon-box mb-4 text-warning"><i class="fas fa-chart-pie fa-3x"></i></div>
+                        <h4>Piyasa Analizi</h4>
+                        <p class="text-muted">Günlük ve haftalık bültenlerle piyasalardaki fırsatları kaçırmayın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h2 class="mb-4">Bizimle İletişime Geçin</h2>
+                    <p class="mb-5">Herhangi bir sorunuz mu var? Danışmanlarımız sizinle iletişime geçmeye hazır.</p>
+                    <div class="d-flex mb-4">
+                        <div class="bg-primary text-white p-3 rounded me-3"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><h5>Merkez Ofis</h5><p>Levent No:123, Beşiktaş/İstanbul</p></div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="bg-primary text-white p-3 rounded me-3"><i class="fas fa-clock"></i></div>
+                        <div><h5>Çalışma Saatleri</h5><p>Pzt - Cum: 09:00 - 18:00</p></div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card p-4 shadow-sm border-0">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-lg bg-light border-0" placeholder="Adınız">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-lg bg-light border-0" placeholder="E-posta">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select form-select-lg bg-light border-0">
+                                        <option selected>Hizmet Seçin</option>
+                                        <option value="1">Yatırım Danışmanlığı</option>
+                                        <option value="2">Vergi Planlaması</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control form-control-lg bg-light border-0" rows="4" placeholder="Mesajınız"></textarea>
+                                </div>
+                                <div class="col-12 text-end">
+                                    <button class="btn btn-primary btn-lg px-5">Mesajı Gönder</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">FINANCEA<span class="text-warning">.</span></h4>
+                    <p>Kurumsal finansal çözümlerde lider çözüm ortağınız. 2008'den beri yanınızdayız.</p>
+                </div>
+                <div class="col-lg-2 ms-auto">
+                    <h5>Linkler</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Kariyer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Bültene Kaydol</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="E-posta">
+                        <button class="btn btn-warning">Abone Ol</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <p class="text-center small mb-0">© 2024 Financea Pro. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
